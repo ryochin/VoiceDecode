@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A04E9C418DEC2C7001C1953 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A04E9C318DEC2C7001C1953 /* Cocoa.framework */; };
+		2A04E9CE18DEC2C7001C1953 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A04E9CC18DEC2C7001C1953 /* InfoPlist.strings */; };
+		2A04E9D018DEC2C7001C1953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A04E9CF18DEC2C7001C1953 /* main.m */; };
+		2A04E9D418DEC2C7001C1953 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A04E9D218DEC2C7001C1953 /* Credits.rtf */; };
+		2A04E9DA18DEC2C7001C1953 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A04E9D818DEC2C7001C1953 /* MainMenu.xib */; };
+		2A04E9DC18DEC2C7001C1953 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A04E9DB18DEC2C7001C1953 /* Images.xcassets */; };
+		2A04E9E318DEC2C7001C1953 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A04E9E218DEC2C7001C1953 /* XCTest.framework */; };
+		2A04E9E418DEC2C7001C1953 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A04E9C318DEC2C7001C1953 /* Cocoa.framework */; };
+		2A04E9EC18DEC2C7001C1953 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A04E9EA18DEC2C7001C1953 /* InfoPlist.strings */; };
+		2A04E9EE18DEC2C7001C1953 /* VoiceDecodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A04E9ED18DEC2C7001C1953 /* VoiceDecodeTests.m */; };
+		2A04E9F918DEC50C001C1953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A04E9F818DEC50C001C1953 /* AppDelegate.m */; };
+		2A04E9FD18DEC525001C1953 /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A04E9FC18DEC525001C1953 /* NSData+Encryption.m */; };
+		2A04E9FF18DEC553001C1953 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A04E9FE18DEC553001C1953 /* Security.framework */; };
+		2A04EA0118DEC559001C1953 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A04EA0018DEC559001C1953 /* SystemConfiguration.framework */; };
+		2A04EA0518DEC596001C1953 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A04EA0418DEC596001C1953 /* UICKeyChainStore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2A04EA0818DEC8C6001C1953 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A04EA0718DEC8C6001C1953 /* DragView.m */; };
+		2A04EA0E18DEF05B001C1953 /* Drop.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A04EA0D18DEF05B001C1953 /* Drop.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A04E9E518DEC2C7001C1953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A04E9B818DEC2C7001C1953 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A04E9BF18DEC2C7001C1953;
+			remoteInfo = VoiceDecode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A04E9C018DEC2C7001C1953 /* VoiceDecode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceDecode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A04E9C318DEC2C7001C1953 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2A04E9C618DEC2C7001C1953 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2A04E9C718DEC2C7001C1953 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2A04E9C818DEC2C7001C1953 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2A04E9CB18DEC2C7001C1953 /* VoiceDecode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VoiceDecode-Info.plist"; sourceTree = "<group>"; };
+		2A04E9CD18DEC2C7001C1953 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A04E9CF18DEC2C7001C1953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A04E9D118DEC2C7001C1953 /* VoiceDecode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VoiceDecode-Prefix.pch"; sourceTree = "<group>"; };
+		2A04E9D318DEC2C7001C1953 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A04E9D918DEC2C7001C1953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2A04E9DB18DEC2C7001C1953 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2A04E9E118DEC2C7001C1953 /* VoiceDecodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceDecodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A04E9E218DEC2C7001C1953 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2A04E9E918DEC2C7001C1953 /* VoiceDecodeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VoiceDecodeTests-Info.plist"; sourceTree = "<group>"; };
+		2A04E9EB18DEC2C7001C1953 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A04E9ED18DEC2C7001C1953 /* VoiceDecodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceDecodeTests.m; sourceTree = "<group>"; };
+		2A04E9F718DEC50C001C1953 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		2A04E9F818DEC50C001C1953 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		2A04E9FB18DEC525001C1953 /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
+		2A04E9FC18DEC525001C1953 /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
+		2A04E9FE18DEC553001C1953 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2A04EA0018DEC559001C1953 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2A04EA0318DEC596001C1953 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		2A04EA0418DEC596001C1953 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
+		2A04EA0618DEC8C6001C1953 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragView.h; path = Classes/DragView.h; sourceTree = "<group>"; };
+		2A04EA0718DEC8C6001C1953 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragView.m; path = Classes/DragView.m; sourceTree = "<group>"; };
+		2A04EA0D18DEF05B001C1953 /* Drop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Drop.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A04E9BD18DEC2C7001C1953 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A04EA0118DEC559001C1953 /* SystemConfiguration.framework in Frameworks */,
+				2A04E9FF18DEC553001C1953 /* Security.framework in Frameworks */,
+				2A04E9C418DEC2C7001C1953 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A04E9DE18DEC2C7001C1953 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A04E9E418DEC2C7001C1953 /* Cocoa.framework in Frameworks */,
+				2A04E9E318DEC2C7001C1953 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A04E9B718DEC2C7001C1953 = {
+			isa = PBXGroup;
+			children = (
+				2A04E9C918DEC2C7001C1953 /* VoiceDecode */,
+				2A04E9E718DEC2C7001C1953 /* VoiceDecodeTests */,
+				2A04E9C218DEC2C7001C1953 /* Frameworks */,
+				2A04E9C118DEC2C7001C1953 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A04E9C118DEC2C7001C1953 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A04E9C018DEC2C7001C1953 /* VoiceDecode.app */,
+				2A04E9E118DEC2C7001C1953 /* VoiceDecodeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A04E9C218DEC2C7001C1953 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A04EA0018DEC559001C1953 /* SystemConfiguration.framework */,
+				2A04E9FE18DEC553001C1953 /* Security.framework */,
+				2A04E9C318DEC2C7001C1953 /* Cocoa.framework */,
+				2A04E9E218DEC2C7001C1953 /* XCTest.framework */,
+				2A04E9C518DEC2C7001C1953 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A04E9C518DEC2C7001C1953 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A04E9C618DEC2C7001C1953 /* AppKit.framework */,
+				2A04E9C718DEC2C7001C1953 /* CoreData.framework */,
+				2A04E9C818DEC2C7001C1953 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2A04E9C918DEC2C7001C1953 /* VoiceDecode */ = {
+			isa = PBXGroup;
+			children = (
+				2A04E9FA18DEC525001C1953 /* ExtLib */,
+				2A04E9F718DEC50C001C1953 /* AppDelegate.h */,
+				2A04E9F818DEC50C001C1953 /* AppDelegate.m */,
+				2A04EA0618DEC8C6001C1953 /* DragView.h */,
+				2A04EA0718DEC8C6001C1953 /* DragView.m */,
+				2A04E9D818DEC2C7001C1953 /* MainMenu.xib */,
+				2A04E9DB18DEC2C7001C1953 /* Images.xcassets */,
+				2A04EA0C18DEF05B001C1953 /* Images */,
+				2A04E9CA18DEC2C7001C1953 /* Supporting Files */,
+			);
+			path = VoiceDecode;
+			sourceTree = "<group>";
+		};
+		2A04E9CA18DEC2C7001C1953 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A04E9CB18DEC2C7001C1953 /* VoiceDecode-Info.plist */,
+				2A04E9CC18DEC2C7001C1953 /* InfoPlist.strings */,
+				2A04E9CF18DEC2C7001C1953 /* main.m */,
+				2A04E9D118DEC2C7001C1953 /* VoiceDecode-Prefix.pch */,
+				2A04E9D218DEC2C7001C1953 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A04E9E718DEC2C7001C1953 /* VoiceDecodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A04E9ED18DEC2C7001C1953 /* VoiceDecodeTests.m */,
+				2A04E9E818DEC2C7001C1953 /* Supporting Files */,
+			);
+			path = VoiceDecodeTests;
+			sourceTree = "<group>";
+		};
+		2A04E9E818DEC2C7001C1953 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A04E9E918DEC2C7001C1953 /* VoiceDecodeTests-Info.plist */,
+				2A04E9EA18DEC2C7001C1953 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A04E9FA18DEC525001C1953 /* ExtLib */ = {
+			isa = PBXGroup;
+			children = (
+				2A04EA0218DEC596001C1953 /* UICKeyChainStore */,
+				2A04E9FB18DEC525001C1953 /* NSData+Encryption.h */,
+				2A04E9FC18DEC525001C1953 /* NSData+Encryption.m */,
+			);
+			path = ExtLib;
+			sourceTree = "<group>";
+		};
+		2A04EA0218DEC596001C1953 /* UICKeyChainStore */ = {
+			isa = PBXGroup;
+			children = (
+				2A04EA0318DEC596001C1953 /* UICKeyChainStore.h */,
+				2A04EA0418DEC596001C1953 /* UICKeyChainStore.m */,
+			);
+			path = UICKeyChainStore;
+			sourceTree = "<group>";
+		};
+		2A04EA0C18DEF05B001C1953 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2A04EA0D18DEF05B001C1953 /* Drop.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A04E9BF18DEC2C7001C1953 /* VoiceDecode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A04E9F118DEC2C7001C1953 /* Build configuration list for PBXNativeTarget "VoiceDecode" */;
+			buildPhases = (
+				2A04E9BC18DEC2C7001C1953 /* Sources */,
+				2A04E9BD18DEC2C7001C1953 /* Frameworks */,
+				2A04E9BE18DEC2C7001C1953 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceDecode;
+			productName = VoiceDecode;
+			productReference = 2A04E9C018DEC2C7001C1953 /* VoiceDecode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A04E9E018DEC2C7001C1953 /* VoiceDecodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A04E9F418DEC2C7001C1953 /* Build configuration list for PBXNativeTarget "VoiceDecodeTests" */;
+			buildPhases = (
+				2A04E9DD18DEC2C7001C1953 /* Sources */,
+				2A04E9DE18DEC2C7001C1953 /* Frameworks */,
+				2A04E9DF18DEC2C7001C1953 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A04E9E618DEC2C7001C1953 /* PBXTargetDependency */,
+			);
+			name = VoiceDecodeTests;
+			productName = VoiceDecodeTests;
+			productReference = 2A04E9E118DEC2C7001C1953 /* VoiceDecodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A04E9B818DEC2C7001C1953 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "studio aquahill";
+				TargetAttributes = {
+					2A04E9E018DEC2C7001C1953 = {
+						TestTargetID = 2A04E9BF18DEC2C7001C1953;
+					};
+				};
+			};
+			buildConfigurationList = 2A04E9BB18DEC2C7001C1953 /* Build configuration list for PBXProject "VoiceDecode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A04E9B718DEC2C7001C1953;
+			productRefGroup = 2A04E9C118DEC2C7001C1953 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A04E9BF18DEC2C7001C1953 /* VoiceDecode */,
+				2A04E9E018DEC2C7001C1953 /* VoiceDecodeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A04E9BE18DEC2C7001C1953 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A04E9CE18DEC2C7001C1953 /* InfoPlist.strings in Resources */,
+				2A04E9DC18DEC2C7001C1953 /* Images.xcassets in Resources */,
+				2A04EA0E18DEF05B001C1953 /* Drop.png in Resources */,
+				2A04E9D418DEC2C7001C1953 /* Credits.rtf in Resources */,
+				2A04E9DA18DEC2C7001C1953 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A04E9DF18DEC2C7001C1953 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A04E9EC18DEC2C7001C1953 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A04E9BC18DEC2C7001C1953 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A04E9FD18DEC525001C1953 /* NSData+Encryption.m in Sources */,
+				2A04E9D018DEC2C7001C1953 /* main.m in Sources */,
+				2A04E9F918DEC50C001C1953 /* AppDelegate.m in Sources */,
+				2A04EA0518DEC596001C1953 /* UICKeyChainStore.m in Sources */,
+				2A04EA0818DEC8C6001C1953 /* DragView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A04E9DD18DEC2C7001C1953 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A04E9EE18DEC2C7001C1953 /* VoiceDecodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A04E9E618DEC2C7001C1953 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A04E9BF18DEC2C7001C1953 /* VoiceDecode */;
+			targetProxy = 2A04E9E518DEC2C7001C1953 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A04E9CC18DEC2C7001C1953 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A04E9CD18DEC2C7001C1953 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A04E9D218DEC2C7001C1953 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A04E9D318DEC2C7001C1953 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2A04E9D818DEC2C7001C1953 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A04E9D918DEC2C7001C1953 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2A04E9EA18DEC2C7001C1953 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A04E9EB18DEC2C7001C1953 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A04E9EF18DEC2C7001C1953 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2A04E9F018DEC2C7001C1953 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2A04E9F218DEC2C7001C1953 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoiceDecode/VoiceDecode-Prefix.pch";
+				INFOPLIST_FILE = "VoiceDecode/VoiceDecode-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2A04E9F318DEC2C7001C1953 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoiceDecode/VoiceDecode-Prefix.pch";
+				INFOPLIST_FILE = "VoiceDecode/VoiceDecode-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2A04E9F518DEC2C7001C1953 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VoiceDecode.app/Contents/MacOS/VoiceDecode";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoiceDecode/VoiceDecode-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VoiceDecodeTests/VoiceDecodeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2A04E9F618DEC2C7001C1953 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VoiceDecode.app/Contents/MacOS/VoiceDecode";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoiceDecode/VoiceDecode-Prefix.pch";
+				INFOPLIST_FILE = "VoiceDecodeTests/VoiceDecodeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A04E9BB18DEC2C7001C1953 /* Build configuration list for PBXProject "VoiceDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A04E9EF18DEC2C7001C1953 /* Debug */,
+				2A04E9F018DEC2C7001C1953 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A04E9F118DEC2C7001C1953 /* Build configuration list for PBXNativeTarget "VoiceDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A04E9F218DEC2C7001C1953 /* Debug */,
+				2A04E9F318DEC2C7001C1953 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A04E9F418DEC2C7001C1953 /* Build configuration list for PBXNativeTarget "VoiceDecodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A04E9F518DEC2C7001C1953 /* Debug */,
+				2A04E9F618DEC2C7001C1953 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A04E9B818DEC2C7001C1953 /* Project object */;
+}

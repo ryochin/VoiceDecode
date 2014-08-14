@@ -1,0 +1,20 @@
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
+
+#define app ((AppDelegate *)[[NSApplication sharedApplication] delegate])
+
+#define PASSPHRASE_KEY @"PASSPHRASE"
+#define ENCRYPTION_SUFFIX @"aes256"
+
+// routine
+#ifdef DEBUG
+//#   define TRACE(fmt, ...) NSLog((@"%s(%d) " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#   define TRACE(fmt, ...) NSLog((@"%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);
+#else
+#   define TRACE(...)
+#endif
+
+#define LS(s) NSLocalizedString(s, nil)
