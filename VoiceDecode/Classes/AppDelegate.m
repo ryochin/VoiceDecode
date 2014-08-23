@@ -101,6 +101,7 @@
 	void (^setDefaultDir)() = ^void(){
 		// fall back to default
 		[self.defaults setObject: [[self class] defaultDir] forKey: @"saveDirectory"];
+		[self.defaults synchronize];
 	};
 
 	BOOL isDirectory;
@@ -149,6 +150,7 @@
 	NSInteger pressedButton = [openPanel runModal];
 	if( pressedButton == NSOKButton ){
 		[self.defaults setObject: [[openPanel URL] path] forKey: @"saveDirectory"];
+		[self.defaults synchronize];
 		[self checkSaveDirectory];
 		[self updateSaveDirDisplay];
 	}
