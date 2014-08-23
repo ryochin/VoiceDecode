@@ -12,6 +12,7 @@
 	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
 
 	defaultValues[@"saveDirectory"] = [[self class] defaultDir];
+	defaultValues[@"savePassPhraseToKeyChain"] = @(YES);
 
 	// register
 	[defaults registerDefaults: defaultValues];
@@ -40,7 +41,7 @@
 	[self.window.contentView addSubview: self.dragView];
 
 	// Label
-	self.passPhraseTextLabel = [[NSTextField alloc] initWithFrame: NSMakeRect( 116, 72 - 2, 80, 24 )];
+	self.passPhraseTextLabel = [[NSTextField alloc] initWithFrame: NSMakeRect( 116, 76 - 2, 80, 24 )];
 	[self.passPhraseTextLabel setBordered: NO];
 	[self.passPhraseTextLabel setEditable: NO];
 	[self.passPhraseTextLabel setBackgroundColor: [NSColor clearColor]];
@@ -50,15 +51,25 @@
 	[self.window.contentView addSubview: self.passPhraseTextLabel];
 
 	// Passphrase
-	self.passPhraseTextView = [[NSSecureTextField alloc] initWithFrame: NSMakeRect( 194, 72, 280, 24 )];
+	self.passPhraseTextView = [[NSSecureTextField alloc] initWithFrame: NSMakeRect( 194, 76, 280, 24 )];
 	self.passPhraseTextView.delegate = self;
 	[[self.passPhraseTextView cell] setWraps: NO];
 	[[self.passPhraseTextView cell] setUsesSingleLineMode: YES];
 
 	[self.window.contentView addSubview: self.passPhraseTextView];
 
+	// checkbox
+	self.savePassPhraseCheckButton = [[NSButton alloc] initWithFrame: NSMakeRect( 192, 44, 120, 32 )];
+	[self.savePassPhraseCheckButton setButtonType: NSSwitchButton];
+	[self.savePassPhraseCheckButton setTitle: LS(@"save to KeyChain")];
+	[self.savePassPhraseCheckButton setState: [[self.defaults objectForKey: @"savePassPhraseToKeyChain"] boolValue]];
+	[self.savePassPhraseCheckButton setTarget: self];
+	[self.savePassPhraseCheckButton setAction: @selector(savePassPhraseCheckButtonDidChange:)];
+
+	[self.window.contentView addSubview: self.savePassPhraseCheckButton];
+
 	// Label
-	self.saveDirTextLabel = [[NSTextField alloc] initWithFrame: NSMakeRect( 116, 28 - 2, 80, 24 )];
+	self.saveDirTextLabel = [[NSTextField alloc] initWithFrame: NSMakeRect( 116, 18 - 2, 80, 24 )];
 	[self.saveDirTextLabel setBordered: NO];
 	[self.saveDirTextLabel setEditable: NO];
 	[self.saveDirTextLabel setBackgroundColor: [NSColor clearColor]];
@@ -68,7 +79,7 @@
 	[self.window.contentView addSubview: self.saveDirTextLabel];
 
 	// Save Directory
-	self.saveDirTextView = [[NSTextField alloc] initWithFrame: NSMakeRect( 194, 28 - 2, 204, 24 )];
+	self.saveDirTextView = [[NSTextField alloc] initWithFrame: NSMakeRect( 194, 18 - 2, 204, 24 )];
 	[self.saveDirTextView setBordered: NO];
 	[self.saveDirTextView setEditable: NO];
 	[self.saveDirTextView setBackgroundColor: [NSColor clearColor]];
@@ -82,7 +93,7 @@
 
 	// Open Button
 	self.openButton = NSButton.new;
-	self.openButton.frame = NSMakeRect( 402, 28, 72, 24 );
+	self.openButton.frame = NSMakeRect( 402, 18, 72, 24 );
 	self.openButton.bezelStyle = NSThickerSquareBezelStyle;
 	self.openButton.title = LS(@"Change");
 	self.openButton.action = @selector(openSaveDirDialog);
@@ -116,11 +127,11 @@
 }
 
 - (void) controlTextDidChange: (NSNotification *) aNotification {
-	[self savePassphraseToKeyChain: [self.passPhraseTextView stringValue]];
+	[self savePassphraseToKeyChain];
 }
 
 - (void) controlTextDidEndEditing: (NSNotification *) aNotification {
-	[self savePassphraseToKeyChain: [self.passPhraseTextView stringValue]];
+	[self savePassphraseToKeyChain];
 }
 
 - (void) setPassphraseFromKeyChain {
@@ -135,10 +146,16 @@
 	[self.saveDirTextView setStringValue: [self.defaults objectForKey: @"saveDirectory"]];
 }
 
-- (void) savePassphraseToKeyChain: (NSString *) passPhrase {
+- (void) savePassphraseToKeyChain {
+	NSString *passPhrase = [self.passPhraseTextView stringValue];
 	if( passPhrase == nil ) return;
 
-	[UICKeyChainStore setString: passPhrase forKey: PASSPHRASE_KEY];
+	if( [self.savePassPhraseCheckButton state] == NSOnState ){
+		[UICKeyChainStore setString: passPhrase forKey: PASSPHRASE_KEY];
+	}
+	else if( [[UICKeyChainStore stringForKey: PASSPHRASE_KEY] length] > 0 ){
+		[UICKeyChainStore setString: @"" forKey: PASSPHRASE_KEY];
+	}
 }
 
 - (void) openSaveDirDialog {
@@ -160,6 +177,13 @@
 	else{
 		TRACE("something is wrong");
 	}
+}
+
+- (void) savePassPhraseCheckButtonDidChange: (id) sender {
+	[self.defaults setObject: @( [self.savePassPhraseCheckButton state] == NSOnState ) forKey: @"savePassPhraseToKeyChain"];
+	[self.defaults synchronize];
+
+	[self savePassphraseToKeyChain];
 }
 
 @end

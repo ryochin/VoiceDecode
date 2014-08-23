@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSTextField       *saveDirTextLabel;
 @property (strong, nonatomic) NSTextField       *saveDirTextView;
 @property (strong, nonatomic) NSButton          *openButton;
+@property (strong, nonatomic) NSButton          *savePassPhraseCheckButton;
 
 + (NSUserDefaults *) getUserDefaults;
 

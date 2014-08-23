@@ -28,15 +28,15 @@
 
 - (void) decrypt: (NSArray *) files {
 	// check passphrase
-	NSString *passPhrase = [UICKeyChainStore stringForKey: PASSPHRASE_KEY];
-	if( [passPhrase isEqualToString: @""] ){
+	NSString *passPhrase = [app.passPhraseTextView stringValue];
+	if( passPhrase == nil || [passPhrase isEqualToString: @""] ){
 		[self showMessage: LS(@"Please set your passphrase which was used to encrypt on Voice Droplet App.") withArgs: nil];
 		return;
 	}
 
 	// decrypt
 	for( __strong NSString *file in files ){
-		if( [self decryptFile: file] == YES ){
+		if( [self decryptFile: file withPassPhrase: passPhrase] == YES ){
 			;
 		}
 		else{
@@ -48,12 +48,15 @@
 	}
 }
 
-- (BOOL) decryptFile: (NSString *) file {
+- (BOOL) decryptFile: (NSString *) file withPassPhrase: (NSString *) passPhrase {
 	NSString *decryptedFile = [self getRawFilePath: file];
+
+	NSAssert( passPhrase != nil, @"passPhrase is not nil" );
+	NSAssert( ! [passPhrase isEqualToString: @""], @"passPhrase is not empty" );
 
 	TRACE("%@ -> %@", file, decryptedFile);
 
-	NSData *content = [[[NSFileManager defaultManager] contentsAtPath: file] AES256DecryptWithKey: [UICKeyChainStore stringForKey: PASSPHRASE_KEY]];
+	NSData *content = [[[NSFileManager defaultManager] contentsAtPath: file] AES256DecryptWithKey: passPhrase];
 
 	if( [[NSFileManager defaultManager] createFileAtPath: decryptedFile contents: content attributes: nil] == YES ){
 		;
